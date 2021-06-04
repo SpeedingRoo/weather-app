@@ -5,23 +5,20 @@ import Head from 'next/head';
 export const getStaticProps = async ()=>{
     const CITY = 'Melbourne';
     let apiKey = 'f620a018d0f4d826614d158f97a3f828';
-    let url = `api.openweathermap.org/data/2.5/weather?q=${CITY}&appid=${apiKey}`;
+    let url = `https://api.openweathermap.org/data/2.5/weather?q=${CITY}&appid=${apiKey}`;
     
-    const response = await fetch(url).
-                              then((res)=> res.json())
-                                .then((data)=>console.log(data))
-                                  .catch((err)=>console.error(err));
-
+    const response = await fetch(url);
+    const data = await response.json();
     if(response===undefined){
-        console.log(response+'is undefined');
-        return { props: { res: 'undefined'}}
+        console.log(data);
+        return { props: { resultData: data}}
     }else{
-        console.log(CITY);
-        return { props: { response } }
+        console.log(data);
+        return { props: { resultData: data } }
     }
 };
 
-export default function FirstPost(){
+export default function FirstPost(props){
     return (
     <section>
         <Head>
@@ -29,14 +26,14 @@ export default function FirstPost(){
         </Head>
         <h1>Check Melbourne Weather</h1>
         <article>
-            {}
+            data should be displayed here: {props.resultData.weather[0].main}
         </article>
-        <Link href='./'>
-            <a >
+        <Link href='../posts'>
+            <a>
                 <button>back to Posts</button>
             </a>
         </Link>
-        <Link href='../'>
+        <Link href='/'>
             <button>
                 <a >back to HOME</a>
             </button>

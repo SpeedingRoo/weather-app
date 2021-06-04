@@ -7,7 +7,7 @@ const PostPageHome = ()=>{
             <Head>
                 <title>All Posts</title>
             </Head>
-            <Link href="../">
+            <Link href="/">
                 <a>
                     <div>GO BACK to Home Page</div>
                 </a>

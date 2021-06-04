@@ -11,7 +11,7 @@ export default function Home() {
       </Head>
       <Layout home>
         <section className={utilStyles.headingMd}>
-          <p>我不喜欢吃小鱼干，我还很喜欢晚上不睡觉</p>
+          <p>我喜欢吃小鱼干，我还喜欢晚上不睡觉</p>
           <p>
             This is a great start for my personal website!
           </p>

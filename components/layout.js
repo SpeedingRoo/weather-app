@@ -40,7 +40,7 @@ export default function Layout({ children, home }) {
           </>
         ) : (
           <>
-            <Link href="/">
+            <Link href="d/">
               <a>
                 <Image
                   priority
