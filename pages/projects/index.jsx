@@ -1,9 +1,10 @@
 import Link from 'next/link';
 import Head from 'next/head';
+import Layout from '../../components/layout';
 
 const PostPageHome = ()=>{
     return (
-        <div>
+        <Layout>
             <Head>
                 <title>All Posts</title>
             </Head>
@@ -15,7 +16,7 @@ const PostPageHome = ()=>{
             <div>
               Here's the home of all my posts, you can go to anyone.
             </div>
-        </div>
+        </Layout>
     );
 }
 

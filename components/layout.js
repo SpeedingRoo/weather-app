@@ -3,10 +3,9 @@ import Image from 'next/image'
 import styles from '../styles/layout.module.css'
 import utilStyles from '../styles/utils.module.css'
 import Link from 'next/link'
-
 const name = `Hi, I'm 小橘猫`
-export const siteTitle = 'Next.js Sample Website'
 
+export const siteTitle = `Robert Wang's Personal Site`
 export default function Layout({ children, home }) {
   return (
     <div className={styles.container}>
@@ -40,7 +39,7 @@ export default function Layout({ children, home }) {
           </>
         ) : (
           <>
-            <Link href="d/">
+            {/* <Link href="d/">
               <a>
                 <Image
                   priority
@@ -51,10 +50,10 @@ export default function Layout({ children, home }) {
                   alt={name}
                 />
               </a>
-            </Link>
+            </Link> */}
             <h2 className={utilStyles.headingLg}>
               <Link href="/">
-                <a className={utilStyles.colorInherit}>{name}</a>
+                <a className={utilStyles.colorInherit}>这里没啥好看的，回到主页去吧！</a>
               </Link>
             </h2>
           </>
@@ -68,6 +67,13 @@ export default function Layout({ children, home }) {
           </Link>
         </div>
       )}
+      {!home && (
+         <div>
+           <Link href="/projects">
+             <a> go to Projects </a>
+           </Link>
+         </div>
+       )}
     </div>
   )
 }
