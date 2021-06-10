@@ -53,3 +53,13 @@
 .lightText {
   color: #666;
 }
+
+.navList {
+  text-decoration-style: none;
+  display:flex;
+  justify-content: space-between;
+}
+
+.navList li{
+  flex:auto;
+}

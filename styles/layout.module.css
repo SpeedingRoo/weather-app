@@ -1,5 +1,6 @@
 .container {
     max-width: 50rem;
+    min-height: 60vh;
     padding: 40px 2rem;
     margin: 1rem auto 3rem;
     background-color: #fda95a;

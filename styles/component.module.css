@@ -1,12 +1,11 @@
-.lists {
-    text-decoration-style: none;
-}
-
 .navigation {
     margin-bottom: 2rem;
     display: flex;
     flex-direction: column;
+    justify-content: center;
     align-items: center;
+    min-height: 20vh;
+    font-size: x-large;
     color:white;
     background-color: rgba(49, 49, 49, .9);
     border-bottom-left-radius: 15px;
@@ -17,12 +16,23 @@
 @import url('https://fonts.googleapis.com/css2?family=Baloo+Tammudu+2&display=swap');
 .footer {
     min-width: 36rem;
+    min-height: 9vh;
     display:flex;
-    justify-content: center;
+    flex-direction: column;
+    justify-content: end;
+    align-items: center;
     padding-top: 1.5rem;
     color: white;
     background-color: rgba(49, 49, 49, .9);
     font-family: 'Baloo Tammudu 2', cursive;
     border-top-left-radius: 15px;
-    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+}
+
+.em {
+    color:aquamarine;
+    background-color: rgba(49, 49, 49, .5);
+    border-radius: 7px;
+    transform:skewX(5);
+    font-weight: bold;
 }
